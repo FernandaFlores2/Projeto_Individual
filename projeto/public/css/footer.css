@@ -1,6 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
 .footer{
     width: 100%;
-    background-color: #191D12;
+    background-color: #000000;
 }
 .footer .container-2 {
     color: #FFFFFF;

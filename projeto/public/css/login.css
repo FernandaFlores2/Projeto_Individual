@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+body {
+    background-image: url(../assets/img/livro-plantas.jpg);
+
+}
+.box{
+    width: 450px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 450px;
+    flex:auto;
+    background-color: #FFFFFF;
+    padding-top: 50px;
+    border-radius: 15px ;
+    margin-top: 200px;
+    margin-bottom: 50px;
+}
+
+.titulo {
+    padding-top: 30px;
+    font-size: 18px;
+}
+
+.box input{
+    color: #daa520;
+    background-color: #F1F1F1;
+    border: none;
+    box-sizing: border-box #daa520;
+    width: 70%;
+    height: 47px;
+    border-radius: 7px;
+    padding: 0 0 0 20px;
+}
+
+.logar{
+    margin-top: 20px;
+    width: 15%;
+    height: 50px;
+    padding: 5px 10px 5px;
+    font-weight: bold;
+    border: 1px solid #7B7B7B;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.entrar:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+.footer{
+    margin-top: 120px;
+    width: 100%;
+    background-color: #191D12;
+}
+.footer .container-2 {
+    color: #FFFFFF;
+    justify-content: space-between;
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+    padding: 25px;
+}
+
+.footer .container-2 p{
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+}
+
+.footer .container-2 .contatos img {
+    padding: 5px;
+    height: 40px;
+}
+
+.footer .container-2 .mais-informacoes input {
+    margin-top: 15px;
+    border-radius: 70px;
+    color: #000000;
+    width: 237px;
+    padding: 10px;
+    
+}
+
+.footer .linha {
+    background-color: #1F2616;
+    border-top: #6D9E6B 2px solid;
+    width: 100%;
+    height: 67px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .linha p{
+    padding: 10px 40px;
+    color: #FFFFFF;
+    /* margin: 0 132px 0 142px; */
+
+    
+}
+.login{
+    padding: 35px;
+    
+}

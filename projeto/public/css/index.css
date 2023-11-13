@@ -7,79 +7,9 @@
 
 }
 
-.header{
-    background-color:/* #fbec5d;*/ #daa520;
-    width: 100%;
-    height: 110px;
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    background-size: cover;
-    /* height: 110px; */
-    /* justify-content: center; */
-    background-position: center;
-}
-
-.container {
-    margin: 0px 90px 0px 90px; 
- }
-
-.logo {
-    color: black;
-    margin: 0 15px;
-    display: flex;
-    font-weight: bold;
-}
-
-.header .container {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-
-.header .container .navbar li {
-    display: inline;
-    padding: 0 15px;
-    margin-left: 150px;
-    
-}
-
-.header .container .navbar li a{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-
-    
-}
-
-.header .container .col-1 ul li {
-    display: inline;
-    padding-left: 20px;
-    display: flex;
-    /* align-items: center; */
-
-}
-
-.header .container .col-1 ul li a{
-    text-decoration: none;
-    /* text-align: center; */
-    display: flex;
-    
-}
-
-.header .container .navbar .btn-header{
-    background-color: #fff;
-    width: 115px;
-    height: 36px;
-    padding: 8px 20px;
-    border-radius: 5px;
-}
 
 .conteudo-1 {
-    background-image: url("../img/biblioteca.jpg");
+    background-image: url("../assets/img/biblioteca.jpg"); /*../public/assets/img/biblioteca.jpg*/
     background-color: #000000;
     background-size: cover;
     height: 850px;
@@ -176,7 +106,7 @@
 
   }
  .conteudo-2 .container .sobre-mim {
-    background-image: url("../img/sobre-mim.png");
+    background-image: url("..assets/img/sobre-mim.png");
     background-size: cover;
     width: 400px;
     height: 400px;
@@ -216,7 +146,7 @@
  }
 
  .conteudo-3 .container .livros-favoritos {
-    background-image: url(../img/livros-favoritos.png);
+    background-image: url("../assets/img/livros-favoritos.png"); /*..assets/img/livros-favoritos.png*/
     background-size: cover;
     width: 700px;
     height: 400px;

@@ -7,12 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../public/css/cadastro.css">
+    <link rel="stylesheet" href="../public/css/index.css">
     <link rel="stylesheet" href="../public/css/header.css">
-    <link rel="stylesheet" href="../public/css/login.css">
     <link rel="stylesheet" href="../public/css/footer.css">
 </head>
 <body>
+
     <div class="header">
         <div class="container">
             <div class="logo">
@@ -35,42 +35,6 @@
 
         </div>
     </div>
-
-    <center>
-        <div class="box">
-            <h1>Iniciar Sessão</h1>
-            <div id="sessao" class="info"></div>
-            <br> 
-            <p class="titulo">E-mail:</p>
-            <input type="email" id="input_email" placeholder="Insira seu e-mail" required>
-            <p class="mensagemErro" id="erroEmail" style="display: none; color: red;"> <br>
-                E-mail inválido! <br>
-              </p>
-              <br>
-              <p class="titulo">Senha: <input type="password"  id="input_senha" placeholder="Senha"><br></p>
-              <p id="mensagemErro" style="color: red"></p>
-
-              <br> <a input id="conta" href="../html/cadastro.html">Não possui uma <strong style="color: black;">conta</strong>?</a> <br>
-              <div class="entrar"> <br>
-                  <button class="logar" onclick="entrar()">Entrar <a href="../html/conta.html">
-
-        </div>
-        <style>
-            /* #input_email {
-                margin-top: 60px;
-               border: 1px solid #38703D; }  */
-           
-           /* #input_senha {
-               margin-top: 25px;
-               border: 1px solid #38703D; } */
-           
-           #conta {
-               text-decoration: none;
-               color: #646464; }
-               
-           </style>
-    </center>
-
     
     <!-- BOTÃO NÃO FUNCIONAL E INPUT SEM TAMANHO FIXO -->
     <div class="footer">
@@ -101,29 +65,3 @@
     </div>
 </body>
 </html>
-
-<script>
-    function entrar() {
-    var email = input_email.value;
-    var senha =input_senha.value;
-    
-         //Validando o email de Login//
-        
-         if (email.indexOf('@') >= 0 && (email.endsWith('.com') || email.endsWith('.br') || email.endsWith('.school'))) {
-          erroEmail.style.display = 'none'
-        }
-        else {
-          erroEmail.style.display = 'block';
-          input_email.style.borderColor = 'red';
-        }
-    
-    
-      if (senha.trim() === '') {
-        document.getElementById("mensagemErro").textContent = "Senha em branco."
-      } else {
-        document.getElementById("mensagemErro").textContent = ""
-      }
-    }
-    
-</script>
-    

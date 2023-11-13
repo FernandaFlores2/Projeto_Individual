@@ -1,0 +1,176 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    /* background-color: #F1F1F1; */
+    background-image: url(../assets/img/livro-plantas.jpg);
+}
+
+
+
+/* 
+.box .logo {
+    width: 50px;
+} */
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* .line {
+    height: 1px;
+    width: 100px;
+    background-color: black;
+    margin: 0 8px 0 8px;
+} */
+
+
+.titulo {
+    color: #a1a1a1;
+    font-size: 48px;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.box input {
+    background-color: #ececec;
+    border: 1px solid;
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    padding: 8px 0 8px 8px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    
+}
+
+.box input::placeholder {
+    font-size: 18px;
+    color: #afafaf;
+    
+}
+
+input:focus {
+    outline-color: #d9a520
+}
+
+.box {
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 600px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 50px;
+    background-color: #fff;
+    box-shadow: rgb(213, 166, 47) 0px 7px 29px 0px;
+    margin-bottom: 50px;
+}
+
+.box button {
+    cursor: pointer;
+    width: 30%;
+    padding: 10px;
+    font-size: 20px;
+    background: #e8b126;
+    border: none;
+    border-radius: 40px;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+
+.botao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box button:hover {
+    background: #daa520;
+}
+
+.mensagemErro {
+    color: red;
+    margin-top: 16px;
+    line-height: 25px;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+/* .lado-esquerdo {
+    display: none;
+} */
+
+#cadastrarse {
+    display: none;
+}
+
+/* .lado-direito p,
+.lado-esquerdo p {
+    text-align: left;
+    color: #383838;
+    font-size: 18px;
+} */
+
+.footer {
+    width: 100%;
+    background-color: #000000;
+}
+
+.footer .container-2 {
+    color: #FFFFFF;
+    justify-content: space-between;
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+    padding: 25px;
+}
+
+.footer .container-2 p {
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+.footer .container-2 .contatos img {
+    padding: 5px;
+    height: 40px;
+}
+
+.footer .container-2 .mais-informacoes input {
+    margin-top: 15px;
+    border-radius: 70px;
+    color: #000000;
+    width: 237px;
+    padding: 10px;
+
+}
+
+.footer .linha {
+    background-color: #daa520;
+    border-top: #efbd3f 2px solid;
+    width: 100%;
+    height: 67px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .linha p {
+    padding: 10px 40px;
+    color: #FFFFFF;
+    /* margin: 0 132px 0 142px; */
+
+
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/css/cadastro.css">
+    <link rel="stylesheet" href="../public/css/header.css">
+    <link rel="stylesheet" href="../public/css/footer.css">
+</head>
+<body>
+    
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <p>LoveBook</p>
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sobre mim</a></li>
+                    <li><a href="#">Projeto</a></li>
+                    <li><a href="#">Recursos</a></li>
+
+                </ul>
+            </div>
+            <div class="col-1">
+                <ul>
+                    <li class="conta"><a class="conta" href="./Login.HTML">Login</a></li>
+                    <ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="box">
+        <h2 class="titulo">Criar Conta</h2>
+        <div class="formulario"></div>
+        <div class="cadastro">
+            <div id="unico">
+                <p>Nome:</p>
+                <input type="email" id="input_nome" placeholder="Insira seu nome" required />
+                <p>Apelido:</p>
+                <input type="text" id="input_apelido" placeholder="Insira seu apelido" required />
+                <p>Data de nascimento:</p>
+                <input type="date" id="input_datatNascimento" placeholder="Insira sua data de nascimento" required />
+                <p>Escolha o gênero: </p>
+                <input type="radio" id="input_generoF" required />
+                <!-- <input type="radio" id="input_generoM" required />
+                <input type="radio" id="input_generoO" required /> -->
+                <p>E-mail:</p>
+                <input type="email" id="input_email" placeholder="Insira o e-mail" required />
+                <div class="mensagemErro" id="erroEmail" style="display: none;">
+                  E-mail inválido <br>
+                </div>
+                <p>Senha:</p>
+                <input type="password" id="input_senha" placeholder="Insira uma senha" required />
+                <div class="mensagemErro" id="erroSenha" style="display: none;">
+                  Insira uma senha com pelo menos 8 dígitos <br>
+                  A senha deve ter pelo menos 1 caractere especial <br>
+                  A senha deve ter pelo menos uma letra maiúscula <br>
+                  A senha deve ter pelo menos uma letra minúscula
+                </div>
+                <div class="botao" id="div_Botao">
+                    <button id="botaoVoltar" style="display: none;" onclick="voltar()">Voltar</button>
+                    <button class="cadatrarse" onclick="cadastrar()">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    
+    <!-- BOTÃO NÃO FUNCIONAL E INPUT SEM TAMANHO FIXO -->
+    <div class="footer">
+        <div class="container-2">
+            <div class="conheca-nos">
+                <h5>Conheça-nos</h5>
+                <p><a href="../html/index.html#sobre-mim">Sobre Mim</a></p>
+            </div>
+            <div class="deixe-nos">
+                <h5>Deixe-nos ajudar você</h5>
+               <p><a href="./conta.html">Sua Conta</a></p>
+                <p><a href="./index.html#suporte-id">Suporte</a></p>
+            </div>
+            <div class="contatos">
+                <h5>Contatos</h5>
+               <p><a href="http://instagra.com/"> <img src="../public/assets/img/Instagram.svg"></a></p>
+                <p>E-mail:fernanda.flores@sptech.school</p>
+            </div>
+            <div class="mais-informacoes">
+                <h5>Gostaria de receber mais informações?</h5>
+                <input type="text" id="email" placeholder="seu e-mail aqui!">
+            </div>
+        </div>
+        <div class="linha">
+            <p>Condições de Uso | Notificação de Privacidade | Cookies | Anúncios baseados em interesses </p>
+            <p>©2023. All Rights Reserved.</p>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+    function cadastrar(){
+        var nome = input_nome.value;
+        var apelido = input_apelido.value;
+        var dataNascimento = input_dataNascimento.value;
+        var generoF = input_generoF.value;
+        var generoM = input_generoM.value;
+        var generoO = input_generoO.value;
+        var email = input_email.value;
+        var senha = input_senha.value;
+
+        var possui_caracter_Especial =
+        senha.indexOf('#') >= 0 ||
+        senha.indexOf('@') >= 0 ||
+        senha.indexOf('!') >= 0 ||
+        senha.indexOf('%') >= 0 ||
+        senha.indexOf('?') >= 0 ||
+        senha.indexOf('-') >= 0 ||
+        senha.indexOf('+') >= 0 ||
+        senha.indexOf('_') >= 0;
+
+    if (email.indexOf('@') >= 0 && (email.endsWith('.com') || email.endsWith('.br') || email.endsWith('.school'))) {
+      erroEmail.style.display = 'none'
+    }
+    else {
+      erroEmail.style.display = 'block';
+      input_email.style.borderColor = 'red';
+    }
+
+    if (senha.length >= 8 && possui_especial && (senha != senha.toUpperCase() && senha != senha.toLowerCase())) {
+      erroSenha.style.display = 'none'
+    }
+    else {
+      erroSenha.style.display = 'block'
+      input_senha.style.borderColor = 'red'
+    }
+
+    if (email.indexOf('@') >= 0 && (email.endsWith('.com') || email.endsWith('.br') || email.endsWith('.school')) && senha.length >= 8 && possui_especial && (senha != senha.toUpperCase() && senha != senha.toLowerCase()) && cnpj.length == 14) {
+     
+      cadastrarse.style.display = "block";
+      botaoVoltar.style.display = "block";
+      div_Botao.style.flexDirection = "row";
+      
+    }
+
+    }
+
+    function voltar(){
+    passoUm.style.display = "block";
+    cadastrarse.style.display = "none";
+    botaoVoltar.style.display = "none";
+    divBotao.style.flexDirection = "column";
+    segundoPasso.style.backgroundColor = "white";
+    numeroDois.style.color = "black";
+}
+</script>
