@@ -14,8 +14,6 @@
     display: flex;
     justify-content: space-between;
     background-size: cover;
-    /* height: 110px; */
-    /* justify-content: center; */
     background-position: center;
 }
 
@@ -54,20 +52,6 @@
     
 }
 
-.header .container .col-1 ul li {
-    display: inline;
-    padding-left: 20px;
-    display: flex;
-    /* align-items: center; */
-
-}
-
-.header .container .col-1 ul li a{
-    text-decoration: none;
-    /* text-align: center; */
-    display: flex;
-    
-}
 
 .header .container .navbar .btn-header{
     background-color: #fff;

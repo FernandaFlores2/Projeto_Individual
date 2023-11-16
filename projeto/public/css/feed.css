@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: 'Ubuntu', sans-serif;
+    /* background-color: #fdefdb; */
+
+}
+
+body{
+    background-color: #fbfbfb; /*#d2bead;*/
+}
+
+li{
+    list-style: none;
+}
+
+.header p {
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 110px;
+    margin: 0 90 0 90px;
+    justify-content: center;
+    text-align: justify;
+    background-color: /* #fbec5d;*/ #daa520;
+    box-shadow: #fbec5d;
+    font-weight: bold;
+
+}
+
+.main {
+    max-width: 900px;
+    margin: 0 auto; /*0 auto*/
+    /* margin-top: 50px;
+    margin-bottom: 50px; */
+}
+
+.info{
+    width: 100%;
+    height: 240px;
+    display: flex;
+    padding: 25px;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 1px 0 3px rgb(0, 0, 0, 0.5);
+}
+
+.info .User{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.info .User .imgUser{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+.info .User .nomeUser{
+    font-size: 20px;
+    margin-left: 10px;
+    color:#000;
+    font-weight: bold;
+}
+
+.info .formPost{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+} 
+
+.info .formPost textarea{
+    background-color: #fbfbfb;
+    margin: 15px 0;
+    padding: 25px;
+    border-radius: 15px;
+    resize: none;
+    outline: none;
+    font-weight: bold;
+    color: #000;
+}
+
+.info .formPost .iconsBtn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info .formPost .iconsBtn .icons button{
+    outline: none;
+    margin-right: 15px;
+    border: 0;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.info .formPost .iconsBtn  button.btnPublicarForm{
+    background-color: #23A0FF;
+    padding: 10px 50px;
+    color: #fff;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border: 0;
+    border-radius: 15px;
+    transition:  0.5s;
+}
+
+.info .formPost .iconsBtn  button.btnPublicarForm:hover{
+    background-color: rgb(36, 150, 237);
+    
+}
+
+.postagens .post{
+    margin: 0 auto;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 1px 0 3px rgb(0, 0, 0, 0.5);
+}
+
+.postagens .post  .postUser{
+    display: flex;
+    align-items: center;
+    /* font-size: 20px;
+    margin-left: 10px;
+    color:#000;
+    font-weight: bold; */
+}
+
+.postagens .post  .postUser .imgUserPost{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    background: #23A0FF;
+}
+
+
+.postagens .post  .postUser .nomeHora {
+color: #23A0FF;
+align-items: center;
+font-size: 20px;
+margin-left: 10px;
+/* color:#000; */
+font-weight: bold;
+
+}
+
+.postagens .post p{
+    width: 100%;
+    margin: 20px 0;
+    font-weight: bold;
+    color: #727272;
+}
+
+.postagens .post .btnPosts{
+    display: flex;
+    align-items: center;
+}
+
+
+.postagens .post .btnPosts button{
+    padding: 5px 20px;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+
+.postagens .post .btnPosts button img{
+    margin: 5px;
+
+}
+
+ .curtir{
+background-color: #f85757;
+
+}
+
+.curtir:hover{
+    background-color: rgb(245, 71, 71)
+
+}
+
+.comentario{
+    background-color: #FFC320;
+}
+
+.comentario:hover{
+    background-color: rgb(245, 180, 0);
+}
+
+/* .postagens .post  .postUser .nomeHora p{
+    color: #D1D1D1;
+    font-size: 12px;
+    
+ } */
+
+ .postagens .post p{
+    width: 100%;
+    margin: 20px 0;
+    font-weight: bold;
+    color: #000;
+
+ }
+
+/* .header .navbar ul li {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+
+}
+.header .navbar ul li a {
+    display: inline;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-left: 20px;
+
+} */
+
+
+
+/* .conteudo-1 .container{
+    align-items: center;
+    display: flex;
+    margin: 0 0 0 90px;
+    justify-content: space-between;
+} */
