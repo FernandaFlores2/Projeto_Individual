@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     font-family: 'Ubuntu', sans-serif;
     /* background-color: #fdefdb; */
 
@@ -78,7 +78,6 @@
     padding: 2px 16px;
     display: flex;
     align-items: center;
-    /* flex-direction: column; */
     margin-bottom: 10px;
     text-align: center;
     margin-top: 100px;
@@ -138,14 +137,6 @@
 }
 
   .conteudo-2 .container .sobre-mim  p{
-    /* color: black; 
-    font-size: 20px; 
-    font-weight: bold;
-    text-align: justify;
-    letter-spacing: 2px;
-    background-color:#d2bead; 
-    border-radius: 10px; */
-
     color: #000000;
     font-size: 18px; 
     font-weight: bold;

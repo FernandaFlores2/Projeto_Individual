@@ -76,11 +76,27 @@ input:focus {
     transition: 0.5s;
 }
 
-.botao {
+.header .container .navbar li {
+    display: inline;
+    padding: 0 15px;
+    margin-left: 150px;
+    
+}
+
+.header .container .navbar li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+
+    
+}
+
+.header .container .navbar .botao {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    background-color: #fff;
 }
 
 .box button:hover {
