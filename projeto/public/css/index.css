@@ -9,10 +9,10 @@
 
 
 .conteudo-1 {
-    background-image: url("../assets/img/biblioteca.jpg"); /*../public/assets/img/biblioteca.jpg*/
+    background: linear-gradient(180deg, rgba(34,34,34,0.5) 0%, rgba(0,0,0,0.5) 100%), url("../assets/img/biblioteca.jpg"); /*../public/assets/img/biblioteca.jpg*/
     background-color: #000000;
     background-size: cover;
-    height: 850px;
+    height: 84vh;
     align-items: center;
     justify-content: center;
     background-position: center;
