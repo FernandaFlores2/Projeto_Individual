@@ -1,89 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livraria</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../public/css/index.css">
-    <link rel="stylesheet" href="../css/feed.css">
-    <link rel="stylesheet" href="../public/css/footer.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livraria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/menu.css">
+  <link rel="stylesheet" href="../css/feed.css">
 </head>
+
 <body>
 
-    <div class="header">
-        <p>Feed LoveBook</p>
-        <!-- <div class="navbar">
-          <ul>          
-             <li class="btn-perfil"><a class="btn-perfil" href="#">perfil</a></li>
-          </ul>   
-      </div> -->
-<!-- Formulário de envio do post -->
-    </div>
-    <div class="container">
-        <div class="menu">
-          <div class="container-image">
-            <img id="fotoPerfil" src="../assets/img/Nanda.jpg" alt="" />
-            <h4>Fernanda Silvino</h4>
-          </div>
-          <div class="container-botao">
-            <a href="perfil.html">Perfil</a>
-            <a href="feed.html">Feed</a>
-            <a href="dashboard.html">Dashboard</a>
-          </div>
-          <div class="container-sair">
-              <button>Sair</button>
-          </div>
-        </div>
-        <div class="conteudo"></div>
+
+  <div class="container">
+    <div class="menu">
+      <div class="container-image">
+        <img id="fotoPerfil" src="../assets/img/Nanda.jpg" alt="" />
+        <h4>Fernanda Silvino</h4>
       </div>
-      
+      <div class="container-botao">
+        <a href="perfil.html">Perfil</a>
+        <a href="feed.html">Feed</a>
+        <a href="dashboard.html">Dashboard</a>
+      </div>
+      <div class="container-sair">
+        <button onclick="sair()">Sair</button>
+      </div>
+    </div>
+
+
+    <div class="conteudo">
+
       <main class="main">
-        <div class="info">
-            <div class="User">
-              <div div class="imgUser">
+        <div class="container-publicacao">
+          <div class="usuario">
+            <div div class="imagem-usuario">
+              <img id="fotoPublicacao" src="../assets/img/Nanda.jpg" alt="" />
             </div>
-            <div class="nomeUser">
+            <div class="nome-usuario">
+              Fernanda Silvino
+            </div>
+
+          </div>
+          <div class="post">
+            <textarea name="textarea" placeholder="Faça uma publicação do seu livro favorito!" id="textarea"></textarea>
+            <div class="icons-botao">
+              <div class="icons">
+                <button class="btn-image"><img src="../assets/img/img.svg" alt="Adicionar uma imagem"></button>
+              </div>
+              <button id="botao" class="btn-publicar">Publicar</button>
+            </div>
+          </div>
+
+        </div>
+
+        <ul id="postagens">
+          <li class="post">
+            <div class="post-usuario">
+              <div class="imagem-post-usuario">
+                <img src="../assets/img/Nanda.jpg" alt="">
+              </div>
+              <div class="nome-hora">
                 Fernanda Silvino
+              </div>
+
             </div>
 
-        </div>
-              <form action="" class="formPost" id="formPost">
-                <textarea name="textarea" placeholder="Faça uma publicação do seu livro favorito!" id="textarea"></textarea>
-                <div class="iconsBtn">
-                    <div class="icons">
-                        <button class="btnForm"><img src="../assets/img/img.svg" alt="Adicionar uma imagem"></button>
-                    </div>
-                    <button type="submit" id="botao" class="btnPublicarForm">Publicar</button>
-                </div>
-              </form>
-            
-        </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint vero nam tempore iure odio animi error
+              molestias mollitia omnis consectetur suscipit ut saepe facilis, distinctio quae! Sit nam est illum?</p>
 
-        <ul class="postagens" id="posts">
-            <li class="post">
-                <div class="postUser">
-                    <div class="imgUserPost">
-                    </div>
-                        <div class="nomeHora">
-                            Fernanda Silvino
-                           <!-- <p> 19:00</p>  -->
-                        </div>
-                    
-                </div>
-               
-                <p>TESTESTETESTETESTETESTE</p>
+            <div class="btn-posts">
+              <button type="button" class="curtir"><img src="../assets/img/heart.svg" alt="Curtir">Curtir</button>
+              <button onclick="mostrarComentarios()" type="button" class="comentario"><img
+                  src="../assets/img/comment.svg" alt="Comentario">Comentar</button>
+            </div>
 
-                <div class="btnPosts">
-                    <button type="button" class="curtir"><img src="../assets/img/heart.svg" alt="Curtir">Curtir</button>
-                    <button type="button" class="comentario"><img src="../assets/img/comment.svg" alt="Curtir">Comentar</button>
-                </div>
-            </li>
+            <div id="containerGeralComentarios">
+              <div class="container-comentario">
+                <textarea class="text-comentario" name="textarea" placeholder="Faça um comentário!"
+                  id="comentario"></textarea>
+                <img onclick="enviarComentario()" src="../assets/img/botao-enviar.png" alt="enviar comentario">
+              </div>
+              <ul class="container-lista-comentarios">
+                <li>
+                  <div class="linha-dados-usuario">
+                    <div class="container-image-comentario">
+                      <img id="fotoLinha" src="../assets/img/Nanda.jpg" alt="" />
+                    </div>
+                    <h4 id="linhaNomeUsuario">Fernanda Silvino</h4>
+                  </div>
+                  <div class="linha-comentario">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sed voluptatem, asperiores dolore
+                      recusandae iste, facere aperiam debitis fugit dicta et? Quod quos odit eum, nihil iusto dolorum
+                      debitis eveniet.</p>
+                  </div>
+                </li>
+
+              </ul>
+
+          </li>
 
         </ul>
-      </main>
-    
+    </div>
+
+    </main>
+  </div>
+  </div>
+
+
+  <script src="../js/menu.js"></script>
+  <script src="../js/feed.js"></script>
+
 </body>
+
 </html>

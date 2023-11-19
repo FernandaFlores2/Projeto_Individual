@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,115 +8,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../public/css/cadastro.css">
-    <link rel="stylesheet" href="../public/css/header.css">
-    <link rel="stylesheet" href="../public/css/login.css">
-    <link rel="stylesheet" href="../public/css/footer.css">
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="stylesheet" href="./css/login.css">
 </head>
+
 <body>
-    <div class="header">
-        <div class="container">
-            <div class="logo">
-                <p>LoveBook</p>
-            </div>
-            <div class="navbar">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Sobre mim</a></li>
-                    <li><a href="#">Projeto</a></li>
-
-                </ul>
-            </div>
-            <div class="col-1">
-                <ul>
-                    <li class="conta"><a class="conta" href="./Login.HTML">Login</a></li>
-                    <ul>
-            </div>
-
-        </div>
-    </div>
-
-    <center>
         <div class="box">
             <h1>Iniciar Sessão</h1>
             <div id="sessao" class="info"></div>
-            <br> 
-            <p class="titulo">E-mail:</p>
+            <br>
+            <div class="container-input">
+            <label for="input_email" class="titulo">E-mail</label>
             <input type="email" id="input_email" placeholder="Insira seu e-mail" required>
-            <p class="mensagemErro" id="erroEmail" style="display: none; color: red;"> <br>
-                E-mail inválido! <br>
-              </p>
-              <br>
-              <p class="titulo">Senha: <input type="password"  id="input_senha" placeholder="Senha"><br></p>
-              <p id="mensagemErro" style="color: red"></p>
-
-              <br> <a input id="conta" href="../html/cadastro.html">Não possui uma <strong style="color: black;">conta</strong>?</a> <br>
-              <div class="entrar"> <br>
-                  <button class="logar" onclick="entrar()">Entrar <a href="../html/conta.html">
-
-        </div>
-        <style>
-            /* #input_email {
-                margin-top: 60px;
-               border: 1px solid #38703D; }  */
-           
-           /* #input_senha {
-               margin-top: 25px;
-               border: 1px solid #38703D; } */
-           
-           #conta {
-               text-decoration: none;
-               color: #646464; }
-               
-           </style>
-    </center>
-
-    
-    <!-- BOTÃO NÃO FUNCIONAL E INPUT SEM TAMANHO FIXO -->
-    <div class="footer">
-        <div class="container-2">
-            <div class="conheca-nos">
-                <h5>Conheça-nos</h5>
-                <p><a href="../html/index.html#sobre-mim">Sobre Mim</a></p>
             </div>
-           
-            <div class="contatos">
-                <h5>Contatos</h5>
-               <p><a href="http://instagram.com/"> <img src="../public/assets/img/Instagram.svg"></a></p>
-                <p>E-mail:fernanda.flores@sptech.school</p>
+            
+            <div class="container-input">
+            <label for="input_senha" class="titulo">Senha</label> 
+            <input type="password" id="input_senha" placeholder="Senha">
             </div>
-          
-        </div>
-        <div class="linha">
-            <p>Condições de Uso | Notificação de Privacidade | Cookies | Anúncios baseados em interesses </p>
-            <p>©2023. All Rights Reserved.</p>
-        </div>
-    </div>
+            <p id="erro"></p>
+            
+             <a input id="conta" href="./cadastro.html">Não possui uma <strong
+                    style="color: black;">conta</strong>?</a> 
+            <div class="entrar"> 
+                <button class="logar" onclick="entrar()">Entrar <a href="./conta.html">
+
+            </div>    
+
+    <script src="./js/login.js"></script>
+
 </body>
-</html>
 
-<script>
-    function entrar() {
-    var email = input_email.value;
-    var senha =input_senha.value;
-    
-         //Validando o email de Login//
-        
-         if (email.indexOf('@') >= 0 && (email.endsWith('.com') || email.endsWith('.br') || email.endsWith('.school'))) {
-          erroEmail.style.display = 'none'
-        }
-        else {
-          erroEmail.style.display = 'block';
-          input_email.style.borderColor = 'red';
-        }
-    
-    
-      if (senha.trim() === '') {
-        document.getElementById("mensagemErro").textContent = "Senha em branco."
-      } else {
-        document.getElementById("mensagemErro").textContent = ""
-      }
-    }
-    
-</script>
-    
+</html>

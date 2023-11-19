@@ -22,7 +22,7 @@ body {
 
 
 .titulo {
-    color: #a1a1a1;
+    color: #000;
     font-size: 48px;
     font-weight: bold;
     margin-bottom: 30px;
@@ -51,13 +51,14 @@ input:focus {
 }
 
 .box {
+    /* backdrop-filter: blur(4px); */
     margin: 0 auto;
     margin-top: 100px;
     width: 600px;
     border-radius: 10px;
     text-align: center;
     padding: 50px;
-    background-color: #fff;
+    background-color: /*transparent;*/ #ffffffe2;
     box-shadow: rgb(213, 166, 47) 0px 7px 29px 0px;
     margin-bottom: 50px;
 }
@@ -117,56 +118,4 @@ input:focus {
     display: none;
 }
 
-.footer {
-    width: 100%;
-    background-color: #000000;
-}
 
-.footer .container-2 {
-    color: #FFFFFF;
-    justify-content: space-between;
-    display: flex;
-    margin: 0 auto;
-    width: 90%;
-    padding: 25px;
-}
-
-.footer .container-2 p {
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 15px;
-    padding-bottom: 15px;
-
-}
-
-.footer .container-2 .contatos img {
-    padding: 5px;
-    height: 40px;
-}
-
-.footer .container-2 .mais-informacoes input {
-    margin-top: 15px;
-    border-radius: 70px;
-    color: #000000;
-    width: 237px;
-    padding: 10px;
-
-}
-
-.footer .linha {
-    background-color: #daa520;
-    border-top: #efbd3f 2px solid;
-    width: 100%;
-    height: 67px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer .linha p {
-    padding: 10px 40px;
-    color: #FFFFFF;
-    /* margin: 0 132px 0 142px; */
-
-
-}

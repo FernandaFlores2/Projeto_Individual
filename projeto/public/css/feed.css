@@ -6,7 +6,7 @@
 
 }
 
-body{
+html, body{
     background-color: #fbfbfb; 
     height: 100%;
     user-select: none;
@@ -15,20 +15,10 @@ body{
 li{
     list-style: none;
 }
-
-.header p {
-    align-items: center;
-    display: flex;
-    width: 100%;
-    height: 110px;
-    margin: 0 90 0 90px;
-    justify-content: center;
-    text-align: justify;
-    background-color:  #daa520;
-    box-shadow: #fbec5d;
-    font-weight: bold;
-
+.container .conteudo {
+    display:block;
 }
+
 
 .main {
     max-width: 900px;
@@ -36,9 +26,8 @@ li{
     
 }
 
-.info{
+.container-publicacao{
     width: 100%;
-    height: 240px;
     display: flex;
     padding: 25px;
     flex-direction: column;
@@ -49,37 +38,43 @@ li{
     box-shadow: 1px 0 3px rgb(0, 0, 0, 0.5);
 }
 
-.info .User{
+.container-publicacao .usuario{
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
 
-.info .User .imgUser{
+.container-publicacao .usuario .imagem-usuario{
     width: 40px;
     height: 40px;
     margin-bottom: 5px;
     border-radius: 50%;
-    background-color: #000;
+    overflow: hidden;
 }
 
-.info .User .nomeUser{
+.container-publicacao .usuario .imagem-usuario img{
+   height: 40px;
+   
+}
+
+.container-publicacao .usuario .nome-usuario{
     font-size: 20px;
     margin-left: 10px;
     color:#000;
     font-weight: bold;
 }
 
-.info .formPost{
+.container-publicacao .post{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    width: 100%;
 } 
 
-.info .formPost textarea{
+.container-publicacao .post textarea{
+    width: 91%;
     background-color: #fbfbfb;
-    margin: 15px 0;
+    margin: 15px;
     padding: 25px;
     border-radius: 15px;
     resize: none;
@@ -88,13 +83,14 @@ li{
     color: #000;
 }
 
-.info .formPost .iconsBtn{
+.container-publicacao .post .icons-botao{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0 16px;
 }
 
-.info .formPost .iconsBtn .icons button{
+.container-publicacao .post .icons-botao .icons button{
     outline: none;
     margin-right: 15px;
     border: 0;
@@ -102,7 +98,7 @@ li{
     cursor: pointer;
 }
 
-.info .formPost .iconsBtn  button.btnPublicarForm{
+.container-publicacao .post .icons-botao  button.btn-publicar{
     background-color: #23A0FF;
     padding: 10px 50px;
     color: #fff;
@@ -114,37 +110,40 @@ li{
     transition:  0.5s;
 }
 
-.info .formPost .iconsBtn  button.btnPublicarForm:hover{
+.container-publicacao .post .icons-botao  button.btn-publicar:hover{
     background-color: rgb(36, 150, 237);
     
 }
 
-.postagens .post{
+#postagens .post{
     margin: 0 auto;
     width: 100%;
     background-color: #fff;
     border-radius: 15px;
     padding: 25px;
-    box-shadow: 1px 0 3px rgb(0, 0, 0, 0.5);
+    /* box-shadow: 1px 0 3px rgb(0, 0, 0, 0.5); */
 }
 
-.postagens .post  .postUser{
+#postagens .post  .post-usuario{
     display: flex;
     align-items: center;
     
 }
 
-.postagens .post  .postUser .imgUserPost{
+#postagens .post  .post-usuario .imagem-post-usuario{
     width: 40px;
     height: 40px;
     margin-bottom: 5px;
     border-radius: 50%;
-    background: #23A0FF;
+    overflow: hidden;
+}
+#postagens .post  .post-usuario .imagem-post-usuario img{
+    height: 40px;
+  
 }
 
 
-.postagens .post  .postUser .nomeHora {
-color: #23A0FF;
+#postagens .post  .post-usuario .nome-hora{
 align-items: center;
 font-size: 20px;
 margin-left: 10px;
@@ -152,20 +151,20 @@ font-weight: bold;
 
 }
 
-.postagens .post p{
+#postagens .post p{
     width: 100%;
     margin: 20px 0;
     font-weight: bold;
     color: #727272;
 }
 
-.postagens .post .btnPosts{
+#postagens .post .btn-posts{
     display: flex;
     align-items: center;
 }
 
 
-.postagens .post .btnPosts button{
+#postagens .post .btn-posts button{
     padding: 5px 20px;
     border: 0;
     display: flex;
@@ -183,7 +182,7 @@ font-weight: bold;
 
 
 
-.postagens .post .btnPosts button img{
+#postagens .post .btn-posts button img{
     margin: 5px;
 
 }
@@ -208,7 +207,7 @@ background-color: #f85757;
 
 
 
- .postagens .post p{
+ #postagens .post p{
     width: 100%;
     margin: 20px 0;
     font-weight: bold;
@@ -216,120 +215,82 @@ background-color: #f85757;
 
  }
 
- .container {
-    display: flex;
-    height: 100%;
-}
-
-.container .menu {
-    width: 16%;
-    display: flex;
-    flex-direction: column;
-    background-color: #daa520;
-    padding: 0 10px;
-
-}
-
-.container .conteudo {
-    /* background-color: black; */
-    width: 84%;
-    padding: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.container .menu .container-image {
-    height: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-}
-
-.container .menu .container-botao {
-    height: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-decoration: none;
-
-}
-
-.container .menu .container-botao a {
-    text-decoration: none;
-    color: black;
-    margin: 16px 0;
+ .container-comentario .text-comentario{
+    width: 92%;
+    background-color: #fbfbfb;
+    margin: 15px 0;
+    padding: 25px;
+    border-radius: 15px;
+    resize: none;
+    outline: none;
     font-weight: bold;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-    border-radius: 10px;
-    transition: all .4s ease-in-out;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: none;
-    cursor: pointer;
+    color: #000;
+ }
+
+ .container-comentario{
     position: relative;
+ }
+
+ .container-comentario .linha-dados-usuario{
     display: flex;
-    justify-content: center;
-    /* border: 2px solid #cd9a1a; */
-}
 
-.container .menu .container-botao a:hover {
-    background-color: #fff;
+ }
 
-}
-
-.container .menu .container-sair {
-    height: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-.container .menu .container-sair button {
-    color: black;
-    margin: 16px 0;
-    font-weight: bold;
-    width: 80%;
-    text-align: center;
-    padding: 10px 0;
-    border-radius: 10px;
-    transition: all .4s ease-in-out;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: none;
-    cursor: pointer;
-    transition: all .4s ease-out;
-}
-
-.container .menu .container-botao a::before {
-    content: "";
-    width: 28px;
-    height: 2px;
-    border-radius: 12px;
-    background-color: #fff;
-    position: absolute;
-    bottom: 0;
-}
-.container .menu .container-sair button:hover{
-    transform: scale(1.04);
-}
-
-
-.container .menu .container-image img {
-    height: 100px;
+.container-image-comentario{
     border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    overflow: hidden; 
+    margin-bottom: 5px;
+ }
+ 
+ #fotoLinha {
+    height: 40px;
+ }
 
+ .linha-dados-usuario{
+    display: flex;
+    align-items: center;
+ }
+
+.linha-comentario p{
+    margin: 8px 0 !important; /*sobrepor o cod de cima, priorizar*/
 
 }
 
-.container .menu .container-image h4 {
-    margin: 8px 0;
-    text-align: center;
-
+#linhaNomeUsuario{
+    margin-left: 10px;
 }
+
+.container-lista-comentarios{
+    margin: 12px;
+    height: 250px;
+    overflow-y: scroll;
+}
+
+.container-lista-comentarios::-webkit-scrollbar {
+    width: 8px;
+}
+
+.container-lista-comentarios::-webkit-scrollbar-track {
+    background: #fbfbfb;
+}
+
+.container-lista-comentarios::-webkit-scrollbar-thumb {
+    background-color: #daa520;
+    border-radius: 30px;
+}
+
+#containerGeralComentarios{
+    display: none;
+}
+
+.container-comentario img{
+    position: absolute;
+    height: 32px;
+    cursor: pointer;
+    right: 28px;
+    top: 40px;
+}
+
+
