@@ -6,19 +6,9 @@
 }
 
 body {
-    /* background-color: #F1F1F1; */
     background-image: url(../assets/img/livro-plantas.jpg);
 }
 
-
-
-
-.formulario {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-}
 
 
 .titulo {
@@ -28,15 +18,27 @@ body {
     margin-bottom: 30px;
 }
 
-.box input {
-    background-color: #ececec;
-    border: 1px solid;
-    display: block;
+
+.container-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 100%;
-    font-size: 18px;
-    padding: 8px 0 8px 8px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+
+}
+
+
+.box input {
+
+    color: #daa520;
+    background-color: #F1F1F1;
+    border: none;
+    box-sizing: border-box #daa520;
+    width: 100%;
+    height: 47px;
+    border-radius: 7px;
+    padding: 0 0 0 20px;
     
 }
 
@@ -46,7 +48,7 @@ body {
     
 }
 
-input:focus {
+input:focus, select:focus {
     outline-color: #d9a520
 }
 
@@ -75,16 +77,17 @@ input:focus {
     font-weight: bold;
     margin-top: 20px;
     transition: 0.5s;
+    margin-bottom: 16px;
 }
 
-.header .container .navbar li {
+ li {
     display: inline;
     padding: 0 15px;
     margin-left: 150px;
     
 }
 
-.header .container .navbar li a{
+ li a{
     text-decoration: none;
     color: black;
     font-weight: bold;
@@ -92,12 +95,10 @@ input:focus {
     
 }
 
-.header .container .navbar .botao {
+.botao {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
 }
 
 .box button:hover {
@@ -118,4 +119,27 @@ input:focus {
     display: none;
 }
 
+select{
+    background-color: #ececec;
+    display: block;
+    width: 100%;
+    height: 47px;
+    font-size: 18px;
+    padding: 8px 0 8px 8px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: none;
+}
 
+
+.texto-login a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+}
+
+label{
+    font-weight: bold;
+    margin: 16px 0 16px 8px;
+    font-size: 18px;
+}

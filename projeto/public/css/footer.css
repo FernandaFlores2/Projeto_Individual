@@ -13,22 +13,46 @@
     color: #FFFFFF;
     justify-content: space-between;
     display: flex;
-    margin: 0 auto;
-    width: 90%;
     padding: 25px;
+    margin: 0 40px;
 }
 
-.footer .container-2 p{
+.footer .container-2 p {
     align-items: center;
     justify-content: space-between;
-    padding-top: 15px;
+    margin: 15px 0;
     padding-bottom: 15px;
+
+}
+.footer .container-2 a {
+    text-decoration: none;
+    color: white;
+      
+}
+
+.footer .container-2 .contatos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
+    
+}
+
+.contatos .icones {
+    display: flex;
+    margin-top: 15px;
 }
 
 .footer .container-2 .contatos img {
     padding: 5px;
     height: 40px;
+    transition: all .4s  ease-in-out;
+
+}
+
+.footer .container-2 .contatos img:hover {
+    transform: scale(1.04);
+
 }
 
 .footer .container-2 .mais-informacoes input {
@@ -41,19 +65,18 @@
 }
 
 .footer .linha {
-    background-color: #daa520;
+    background-color: #000000;
     border-top: #000000 2px solid;
-    width: 100%;
     height: 67px;
     display: flex; 
     justify-content: space-between;
     align-items: center;
+    padding: 25px;
+    margin: 0 40px;
 }
 
 .footer .linha p{
-    padding: 10px 40px;
     color: #FFFFFF;
-    /* margin: 0 132px 0 142px; */
 
     
 }

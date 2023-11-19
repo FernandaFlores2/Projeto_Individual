@@ -15,9 +15,11 @@ body {
 .box{
     width: 450px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    background-color: #FFFFFF;
+    background-color:#ffffffe2;
     padding-top: 50px;
     border-radius: 15px ;
+    box-shadow: rgb(213, 166, 47) 0px 7px 29px 0px;
+    
 }
 
 .titulo {
@@ -36,6 +38,7 @@ body {
     border-radius: 7px;
     padding: 0 0 0 20px;
 }
+
 
 .logar{
     margin-top: 20px;
@@ -65,6 +68,7 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
+    
 }
 
 #conta{
@@ -75,4 +79,10 @@ body {
 #erro{
     margin: 16px 0;
     color: red;
+}
+
+.texto-cadastro a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
 }
