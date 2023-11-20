@@ -74,7 +74,59 @@ function cadastrar(req, res) {
     }
 }
 
+
+    function atualizarNome(req, res){
+        var idUsuario = req.params.idUsuario;
+        var nome = req.body.nomeServer;
+
+        if (nome == '') {
+            res.status(400).send("Seu nome está vazio!");
+        } else {
+    
+            usuarioModel.atualizarNome(idUsuario, nome)
+                .then(
+                    function () {
+                    
+                            res.status(200).send("Nome foi atualizado com sucesso!");
+                        
+                    }
+                ).catch(
+                    function (erro) {
+                        res.status(500).json(erro.sqlMessage);
+                    }
+                );
+        }
+        
+    }
+
+    function atualizarFoto(req, res){
+        var idUsuario = req.params.iUsuario;
+        var foto = req.body.fotoServer;
+        
+        if (foto == '') {
+            res.status(400).send("Sua foto está vazia!");
+        } else {
+    
+            usuarioModel.atualizarFoto(idUsuario, caminhoImagem)
+                .then(
+                    function () {
+                    
+                            res.status(200).send("Sua foto foi atualizado com sucesso!");
+                        
+                    }
+                ).catch(
+                    function (erro) {
+                        res.status(500).json(erro.sqlMessage);
+                    }
+                );
+        }
+
+
+    }
+
 module.exports = {
     autenticar,
-    cadastrar
+    cadastrar,
+    atualizarNome,
+    atualizarFoto
 }

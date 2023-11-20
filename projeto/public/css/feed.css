@@ -71,12 +71,40 @@ li{
     flex-direction: column;
 } 
 
-.container-publicacao .post textarea{
+
+input[type="file"]{
+    display: none;
+
+}
+
+.btn-image{
+    cursor: pointer;
+}
+
+.container-publicacao .post .textarea-foto {
     width: 91%;
     background-color: #fbfbfb;
     margin: 15px;
     padding: 25px;
     border-radius: 15px;
+    border: 1px solid #000;
+    font-weight: bold;
+    color: #000;
+}
+
+.container-publicacao .post .textarea-foto #fotoPubli{
+    display: none;
+}
+
+.container-publicacao .post .textarea-foto #fotoPubli img{
+    height: 300px;
+}
+
+.container-publicacao .post textarea{
+    width: 91%;
+    background-color: #fbfbfb;
+    padding: 25px;
+    border: none;
     resize: none;
     outline: none;
     font-weight: bold;

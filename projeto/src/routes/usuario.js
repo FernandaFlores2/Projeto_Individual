@@ -12,4 +12,12 @@ router.post("/autenticar", function (req, res) {
     usuarioController.autenticar(req, res);
 });
 
+router.post("/atualizarNome/:idUsuario", function (req, res) {
+    usuarioController.atualizarNome(req, res);
+})
+
+router.post("/atualizarFoto/:idUsuario", function (req, res) {
+    usuarioController.atualizarFoto(req, res);
+});
+
 module.exports = router;

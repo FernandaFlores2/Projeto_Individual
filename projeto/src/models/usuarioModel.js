@@ -20,7 +20,29 @@ function cadastrar(nome, dataNascimento, genero, email, senha ) {
     return database.executar(instrucao);
 }
 
+function atualizarFoto(fkUsuario, caminhoImagem) {
+
+    var instrucao = `
+    UPDATE fotos SET caminhoImagem = ${caminhoImagem} WHERE fkUsuario = ${fkUsuario};
+`;
+ console.log("Executando a instrução SQL: \n" + instrucao);
+ return database.executar(instrucao);
+}
+
+
+function atualizarNome(idUsuario, nome) {
+    
+    var instrucao = `
+    UPDATE usuario SET nome = ${nome} WHERE idUsuario = ${idUsuario};
+`;
+ console.log("Executando a instrução SQL: \n" + instrucao);
+ return database.executar(instrucao);
+}
+
+
 module.exports = {
     autenticar,
-    cadastrar
+    cadastrar,
+    atualizarFoto,
+    atualizarNome
 };

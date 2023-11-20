@@ -1,27 +1,47 @@
-// var database = require("../database/config");
+var database = require("../database/config")
 
-// function buscarPorId(id) {
-//   var query = `select * from empresa where id = '${id}'`;
+function PostsMaisCurtidas(fkUsuario) {
+    var instrucao = 
+    `
+    SELECT COUNT(idCurtidasPublicacao) AS qtdCurtidas, fkPublicacao FROM curtidasPublicacao	WHERE fkUsuario = ${fkUsuario}
+	GROUP BY fkPublicacao
+		ORDER BY qtdCurtidas DESC LIMIT 5; `;
 
-//   return database.executar(query);
-// }
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
 
-// function listar() {
-//   var query = `select * from empresa`;
 
-//   return database.executar(query);
-// }
 
-// function buscarPorCnpj(cnpj) {
-//   var query = `select * from empresa where cnpj = '${cnpj}'`;
+// Coloque os mesmos parâmetros aqui. Vá para a var instrucao
+function curtirPost(fkUsuario, fkPublicacao ) {
+    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+    INSERT INTO curtidasPublicacao(fkUsuario, fkPublicacao) VALUES = (${fkUsuario}, ${fkPublicacao})`;
 
-//   return database.executar(query);
-// }
 
-// function cadastrar(razaoSocial, cnpj) {
-//   var query = `insert into empresa (razao_social, cnpj) values ('${razaoSocial}', '${cnpj}')`;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
 
-//   return database.executar(query);
-// }
 
-// module.exports = { buscarPorCnpj, buscarPorId, cadastrar, listar };
+function descurtirPost(idPublicacao) {
+
+    var instrucao = `
+       DELETE FROM curtidasPublicacao WHERE fkPublicacao = ${idPublicacao};
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+
+
+
+
+module.exports = {
+    PostsMaisCurtidas,
+    curtirPost, 
+    descurtirPost
+};

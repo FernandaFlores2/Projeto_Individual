@@ -8,3 +8,8 @@ function editarImagem() {
     reader.onload = () => fotoEdicao.src = reader.result;
     reader.readAsDataURL(image.files[0]);
 }
+
+/*
+var reader = 
+
+*/

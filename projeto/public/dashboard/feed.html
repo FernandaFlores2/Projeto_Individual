@@ -46,10 +46,18 @@
 
           </div>
           <div class="post">
-            <textarea name="textarea" placeholder="Faça uma publicação do seu livro favorito!" id="textarea"></textarea>
+            <div class="textarea-foto">
+              <textarea name="textarea" placeholder="Faça uma publicação do seu livro favorito!" id="textarea"></textarea>
+              <div id="fotoPubli">
+                <img id="fotoEscolhidaPublic" src=" ">
+              </div>
+            </div>
             <div class="icons-botao">
               <div class="icons">
-                <button class="btn-image"><img src="../assets/img/img.svg" alt="Adicionar uma imagem"></button>
+                
+                <label for="image" class="btn-image"><img src="../assets/img/img.svg" alt="Adicionar uma imagem"></label>
+                <input onchange="mostrarFoto()" type="file" id="image" accept="image/png, image/jpeg, image/jpg" />
+
               </div>
               <button id="botao" class="btn-publicar">Publicar</button>
             </div>
