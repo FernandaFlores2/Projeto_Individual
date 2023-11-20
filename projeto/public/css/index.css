@@ -27,14 +27,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 #conteudo1 {
-    background: linear-gradient(180deg, rgba(34,34,34,0.5) 0%, rgba(0,0,0,0.5) 100%), url("../assets/img/biblioteca.jpg"); /*../public/assets/img/biblioteca.jpg*/
+    background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 100%), url("../assets/img/biblioteca.jpg"); /*../public/assets/img/biblioteca.jpg*/
     background-color: #000000;
     background-size: cover;
     height: 84vh;
     align-items: center;
     justify-content: center;
     background-position: center;
-    background-color: rgba(0, 0, 0, 0.5); /*background com opacidade */
     padding-top: 110px;
     
 
@@ -43,20 +42,18 @@ body::-webkit-scrollbar-thumb {
 #conteudo1 .container{
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    height: 100%;
 }
 
 #conteudo1 .container .texto h1{
-    width: 339px;
-    height: 200px;
+    text-align: center;
     font-size: 35px;
     margin-bottom: 10px;
     font-weight: lighter; /*não negrito*/
     color: #daa520;
-    align-items: center;
-    justify-content: center;
-    padding-inline: 600px;
-    /* animation: op 1s ease; */
+  
+   
 }
 
 #conteudo1 .container .texto p{
@@ -65,7 +62,6 @@ body::-webkit-scrollbar-thumb {
     margin-top: 20px;
     color: #fff;
     font-style: italic;
-    /* color: #fbec5d; */
     font-size: 18px; 
     font-weight: bold;
     text-align: justify;
@@ -112,26 +108,28 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
     margin-top: 100px;
     background-color: #d2bead;
+    border-radius: 10px;
    
 
 }
 
 .cards .container .card .fisico-digital{
-    width: 15%;
+    width: 14%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 
 .cards .container .card .fd-image{
-     width: 15%;
+     width: 14%;
      display: flex;
      justify-content: center;
 } 
 
 
 .cards .container .card .fd-texto{
-    width: 70%;
+    width: 72%;
 }
 
 .container .card p{
@@ -139,7 +137,9 @@ body::-webkit-scrollbar-thumb {
 
 }
 .container .card img{
-    float: left;
+    /* float: left; */
+    width: 150px;
+    height: 150px;   
 
 }
 
