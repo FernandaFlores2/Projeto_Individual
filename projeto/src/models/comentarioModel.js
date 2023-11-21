@@ -48,12 +48,18 @@ function excluirComentario(idComentario) {
 }
 
 
-
-
+function excluirComentarioGeral(idPublicacao){
+    var instrucao = `
+    DELETE FROM comentario WHERE fkPublicacao = ${idPublicacao};
+ `;
+ console.log("Executando a instrução SQL: \n" + instrucao);
+ return database.executar(instrucao);
+}
 
 module.exports = {
     listarComentario,
     criarComentario,
     atualizarComentario,
-    excluirComentario
+    excluirComentario,
+    excluirComentarioGeral
 };

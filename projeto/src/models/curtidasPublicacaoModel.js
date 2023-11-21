@@ -1,6 +1,6 @@
 var database = require("../database/config")
 
-function PostsMaisCurtidas(fkUsuario) {
+function PostsMaisCurtidos(fkUsuario) {
     var instrucao = 
     `
     SELECT COUNT(idCurtidasPublicacao) AS qtdCurtidas, fkPublicacao FROM curtidasPublicacao	WHERE fkUsuario = ${fkUsuario}
@@ -41,7 +41,7 @@ function descurtirPost(idPublicacao) {
 
 
 module.exports = {
-    PostsMaisCurtidas,
+    PostsMaisCurtidos,
     curtirPost, 
     descurtirPost
 };

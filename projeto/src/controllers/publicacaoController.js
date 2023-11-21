@@ -1,5 +1,6 @@
 var publicacaoModel = require("../models/publicacaoModel");
 var curtidasPublicacaoModel = require("../models/curtidasPublicacaoModel");
+var comentarioModel = require("../models/comentarioModel");
 
 function listarPublicacao(req, res) {
 
@@ -85,15 +86,24 @@ function excluirPublicacao(req, res) {
             function () {
                 curtidasPublicacaoModel.descurtirPost(idPublicacao)
                     .then(
-                        function () {
-                            publicacaoModel.excluirPublicacao(idPublicacao)
-                                .then(
-                                    function () {
 
-                                        res.status(200).send("Publicação excluída com sucesso!");
+                        function () {
+                            comentarioModel.excluirComentarioGeral(idPublicacao)
+                                .then(
+
+                                    function () {
+                                        publicacaoModel.excluirPublicacao(idPublicacao)
+                                            .then(
+                                                function () {
+
+                                                    res.status(200).send("Publicação excluída com sucesso!");
+                                                }
+                                            )
                                     }
                                 )
                         }
+
+
                     )
 
             }

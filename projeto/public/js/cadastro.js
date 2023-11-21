@@ -33,7 +33,7 @@ function cadastrar() {
 
     if (email.indexOf('@') >= 0 && (email.endsWith('.com') || email.endsWith('.br') || email.endsWith('.outlook')) && senha.length >= 8 && possui_especial && (senha != senha.toUpperCase() && senha != senha.toLowerCase())) {
 
-        fetch("/usuario/cadastrar", {
+        fetch("/usuario/cadastrar/", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

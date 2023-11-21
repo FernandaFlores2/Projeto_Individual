@@ -12,11 +12,11 @@ router.post("/autenticar", function (req, res) {
     usuarioController.autenticar(req, res);
 });
 
-router.post("/atualizarNome/:idUsuario", function (req, res) {
+router.put("/atualizarNome/:idUsuario", function (req, res) {
     usuarioController.atualizarNome(req, res);
 })
 
-router.post("/atualizarFoto/:idUsuario", function (req, res) {
+router.put("/atualizarFoto/:idUsuario", function (req, res) {
     usuarioController.atualizarFoto(req, res);
 });
 

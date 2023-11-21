@@ -1,48 +1,69 @@
-// var medidaModel = require("../models/medidaModel");
-
-// function buscarUltimasMedidas(req, res) {
-
-//     const limite_linhas = 7;
-
-//     var idAquario = req.params.idAquario;
-
-//     console.log(`Recuperando as ultimas ${limite_linhas} medidas`);
-
-//     medidaModel.buscarUltimasMedidas(idAquario, limite_linhas).then(function (resultado) {
-//         if (resultado.length > 0) {
-//             res.status(200).json(resultado);
-//         } else {
-//             res.status(204).send("Nenhum resultado encontrado!")
-//         }
-//     }).catch(function (erro) {
-//         console.log(erro);
-//         console.log("Houve um erro ao buscar as ultimas medidas.", erro.sqlMessage);
-//         res.status(500).json(erro.sqlMessage);
-//     });
-// }
+var curtidasPublicacaoModel = require("../models/curtidasPublicacaoModel");
 
 
-// function buscarMedidasEmTempoReal(req, res) {
+function PostsMaisCurtidos(req, res) {
+    var fkUsuario = req.params.fkUsuario;
 
-//     var idAquario = req.params.idAquario;
+    curtidasPublicacaoModel.PostsMaisCurtidos(fkUsuario)
+        .then(
+            function (resultado) {
 
-//     console.log(`Recuperando medidas em tempo real`);
 
-//     medidaModel.buscarMedidasEmTempoReal(idAquario).then(function (resultado) {
-//         if (resultado.length > 0) {
-//             res.status(200).json(resultado);
-//         } else {
-//             res.status(204).send("Nenhum resultado encontrado!")
-//         }
-//     }).catch(function (erro) {
-//         console.log(erro);
-//         console.log("Houve um erro ao buscar as ultimas medidas.", erro.sqlMessage);
-//         res.status(500).json(erro.sqlMessage);
-//     });
-// }
+                res.status(200).json(resultado);
 
-// module.exports = {
-//     buscarUltimasMedidas,
-//     buscarMedidasEmTempoReal
+            }
+        ).catch(
+            function (erro) {
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
 
-// }
+
+
+function curtirPost(req, res) {
+    var idPublicacao = req.body.idPublicacao;
+    var idUsuario = req.body.idUsuario;
+
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+       curtidasPublicacaoModel.descurtirPost(idPublicacao, idUsuario)
+            .then(
+                function (resultado) {
+
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+
+function descurtirPost(req, res) {
+    var idPublicacao = req.params.idPublicacao;
+    
+
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+       curtidasPublicacaoModel.descurtirPost(idPublicacao)
+            .then(
+                function (resultado) {
+
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+
+
+
+
+
+
+module.exports = {
+    PostsMaisCurtidos,
+    curtirPost,
+    descurtirPost
+}
