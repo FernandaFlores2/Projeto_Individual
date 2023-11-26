@@ -14,7 +14,7 @@ senha VARCHAR(45)
 
 CREATE TABLE Publicacao(
 idPublicacao INT  AUTO_INCREMENT,
-texto VARCHAR(255),
+texto VARCHAR(800),
 dataPublicacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 fkUsuario INT,
 	FOREIGN KEY (fkUsuario) REFERENCES Usuario (idUsuario),
