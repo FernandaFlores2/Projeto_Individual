@@ -4,7 +4,7 @@ var comentarioModel = require("../models/comentarioModel");
 function listarComentario(req, res) {
     var fkPublicacao = req.params.fkPublicacao;
 
-    comentarioModel.PostsMaisCurtidos(fkPublicacao)
+    comentarioModel.listarComentario(fkPublicacao)
         .then(
             function (resultado) {
 
@@ -31,11 +31,13 @@ function criarComentario(req, res) {
             .then(
                 function (resultado) {
 
+                    console.log(resultado);
                     res.json(resultado);
                 }
             ).catch(
                 function (erro) {
                     res.status(500).json(erro.sqlMessage);
+                    console.log(erro);
                 }
             );
     }

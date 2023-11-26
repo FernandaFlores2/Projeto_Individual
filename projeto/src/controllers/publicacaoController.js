@@ -35,13 +35,13 @@ function criarPublicacao(req, res) {
     } else {
 
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        publicacaoModel.criarPulicacao(texto, idUsuario)
+        publicacaoModel.criarPublicacao(texto, idUsuario)
             .then(
                 function (resultado) {
 
-                    if (caminhoImagem != " ") {
+                    // if (caminhoImagem != " ") {
                         publicacaoModel.adicionarFoto(caminhoImagem, resultado.insertId)
-                    }
+                    
                     res.json(resultado);
                 }
             ).catch(

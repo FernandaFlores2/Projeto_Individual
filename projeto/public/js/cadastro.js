@@ -15,7 +15,7 @@ function cadastrar() {
         senha.indexOf('+') >= 0 ||
         senha.indexOf('_') >= 0;
 
-    if (email.indexOf('@') >= 0 && (email.endsWith('.com') || email.endsWith('.br') || email.endsWith('.outlook'))) {
+    if (email.indexOf('@') >= 0 && (email.endsWith('.com') || email.endsWith('.br'))) {
         erroEmail.style.display = 'none'
     }
     else {
@@ -31,7 +31,7 @@ function cadastrar() {
         input_senha.style.borderColor = 'red'
     }
 
-    if (email.indexOf('@') >= 0 && (email.endsWith('.com') || email.endsWith('.br') || email.endsWith('.outlook')) && senha.length >= 8 && possui_especial && (senha != senha.toUpperCase() && senha != senha.toLowerCase())) {
+    if (email.indexOf('@') >= 0 && (email.endsWith('.com') || email.endsWith('.br')) && senha.length >= 8 && possui_especial && (senha != senha.toUpperCase() && senha != senha.toLowerCase())) {
 
         fetch("/usuario/cadastrar/", {
             method: "POST",

@@ -12,14 +12,14 @@
   <link rel="stylesheet" href="../css/feed.css">
 </head>
 
-<body>
+<body onload="listarPublicacao()">
 
 
   <div class="container">
     <div class="menu">
       <div class="container-image">
-        <img id="fotoPerfil" src="../assets/img/Nanda.jpg" alt="" />
-        <h4>Fernanda Silvino</h4>
+        <img id="fotoPerfil" src="../assets/img/foto.jpg" alt="" />
+        <h4 id="nomeMenu"></h4>
       </div>
       <div class="container-botao">
         <a href="perfil.html">Perfil</a>
@@ -38,84 +38,86 @@
         <div class="container-publicacao">
           <div class="usuario">
             <div div class="imagem-usuario">
-              <img id="fotoPublicacao" src="../assets/img/Nanda.jpg" alt="" />
+              <img id="fotoPublicacao" src="../assets/img/foto.jpg" alt="" />
             </div>
-            <div class="nome-usuario">
+            <div id="puxarNome" class="nome-usuario">
               Fernanda Silvino
             </div>
 
           </div>
           <div class="post">
             <div class="textarea-foto">
-              <textarea name="textarea" placeholder="Faça uma publicação do seu livro favorito!" id="textarea"></textarea>
+              <textarea name="textarea" placeholder="Faça uma publicação do seu livro favorito!"
+                id="textarea"></textarea>
               <div id="fotoPubli">
                 <img id="fotoEscolhidaPublic" src=" ">
               </div>
             </div>
+
             <div class="icons-botao">
               <div class="icons">
-                
-                <label for="image" class="btn-image"><img src="../assets/img/img.svg" alt="Adicionar uma imagem"></label>
+
+                <label for="image" class="btn-image"><img src="../assets/img/img.svg"
+                    alt="Adicionar uma imagem"></label>
                 <input onchange="mostrarFoto()" type="file" id="image" accept="image/png, image/jpeg, image/jpg" />
 
               </div>
-              <button id="botao" class="btn-publicar">Publicar</button>
+              <button id="botao" method="post" onclick="publicar(), setTimeout(()=>listarPublicacao(),200)"
+                class="btn-publicar">Publicar</button>
+           
             </div>
           </div>
 
         </div>
 
-        <ul id="postagens">
-          <li class="post">
-            <div class="post-usuario">
-              <div class="imagem-post-usuario">
-                <img src="../assets/img/Nanda.jpg" alt="">
+        <div>
+          <ul id="postagens">
+            <li class="post">
+              <div class="post-usuario">
+                <div class="imagem-post-usuario">
+                  <img src="../assets/img/foto.jpg" alt="">
+                </div>
+                <div id="nomePost" class="nome-hora">
+                </div>
+
               </div>
-              <div class="nome-hora">
-                Fernanda Silvino
+
+              <p id="PublicacaoTexto"></p>
+
+              <div class="btn-posts">
+                <button type="button" class="curtir"><img src="../assets/img/heart.svg" alt="Curtir">Curtir</button>
+                <button onclick="mostrarComentarios()" type="button" class="comentario"><img
+                    src="../assets/img/comment.svg" alt="Comentario">Comentar</button>
               </div>
 
-            </div>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint vero nam tempore iure odio animi error
-              molestias mollitia omnis consectetur suscipit ut saepe facilis, distinctio quae! Sit nam est illum?</p>
-
-            <div class="btn-posts">
-              <button type="button" class="curtir"><img src="../assets/img/heart.svg" alt="Curtir">Curtir</button>
-              <button onclick="mostrarComentarios()" type="button" class="comentario"><img
-                  src="../assets/img/comment.svg" alt="Comentario">Comentar</button>
-            </div>
-
-            <div id="containerGeralComentarios">
-              <div class="container-comentario">
-                <textarea class="text-comentario" name="textarea" placeholder="Faça um comentário!"
-                  id="comentario"></textarea>
-                <img onclick="enviarComentario()" src="../assets/img/botao-enviar.png" alt="enviar comentario">
-              </div>
-              <ul class="container-lista-comentarios">
-                <li>
-                  <div class="linha-dados-usuario">
-                    <div class="container-image-comentario">
-                      <img id="fotoLinha" src="../assets/img/Nanda.jpg" alt="" />
+              <div id="containerGeralComentarios">
+                <div class="container-comentario">
+                  <textarea class="text-comentario" name="textarea" placeholder="Faça um comentário!"
+                    id="comentario"></textarea>
+                  <img onclick="enviarComentario()" src="../assets/img/botao-enviar.png" alt="enviar comentario">
+                </div>
+                <ul id="containerListaComentarios" class="container-lista-comentarios">
+                  <li>
+                    <div class="linha-dados-usuario">
+                      <div class="container-image-comentario">
+                        <img id="fotoLinha" src="../assets/img/foto.jpg" alt="" />
+                      </div>
+                      <h4 id="linhaNomeUsuario"></h4>
                     </div>
-                    <h4 id="linhaNomeUsuario">Fernanda Silvino</h4>
-                  </div>
-                  <div class="linha-comentario">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sed voluptatem, asperiores dolore
-                      recusandae iste, facere aperiam debitis fugit dicta et? Quod quos odit eum, nihil iusto dolorum
-                      debitis eveniet.</p>
-                  </div>
-                </li>
+                    <div class="linha-comentario">
+                      <p id="comentarioPublicacao"></p>
+                    </div>
+                  </li>
 
-              </ul>
+                </ul>
+              </div>
+            </li>
 
-          </li>
+          </ul>
+        </div>
 
-        </ul>
+      </main>
     </div>
-
-    </main>
-  </div>
   </div>
 
 
@@ -125,3 +127,4 @@
 </body>
 
 </html>
+

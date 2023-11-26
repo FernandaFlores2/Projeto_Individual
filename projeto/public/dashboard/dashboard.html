@@ -1,39 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/menu.css" />
-    <link rel="stylesheet" href="../css/dashboard.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
-      rel="stylesheet"
-    />
 
-    <title>Dashboard</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="menu">
-        <div class="container-image">
-          <img id="fotoPerfil" src="../assets/img/Nanda.jpg" alt="" />
-          <h4>Fernanda Silvino</h4>
-        </div>
-        <div class="container-botao">
-          <a href="perfil.html">Perfil</a>
-          <a href="feed.html">Feed</a>
-          <a href="dashboard.html">Dashboard</a>
-        </div>
-        <div class="container-sair">
-            <button  onclick="sair()">Sair</button>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/menu.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+  <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
+  <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+
+  <title>Dashboard</title>
+</head>
+
+<body onload="obterDadosGrafico()">
+  <div class="container">
+    <div class="menu">
+      <div class="container-image">
+        <img id="fotoPerfil" src="../assets/img/foto.jpg" alt="" />
+        <h4>Fernanda Silvino</h4>
       </div>
-
-      <div class="conteudo"></div>
+      <div class="container-botao">
+        <a href="perfil.html">Perfil</a>
+        <a href="feed.html">Feed</a>
+        <a href="dashboard.html">Dashboard</a>
+      </div>
+      <div class="container-sair">
+        <button onclick="sair()">Sair</button>
+      </div>
     </div>
 
-    <script src="../js/menu.js"></script>
-    <script src="../js/dashboard.js"></script>
+    <div class="conteudo">
+      <div class="grafico-um">
+        <canvas id="chart"></canvas>
+      </div>
 
-  </body>
+      <div class="grafico-dois">
+        <canvas id="chart2"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/menu.js"></script>
+  <script src="../js/dashboard.js"></script>
+
+
+  <script>
+    const chart = document.getElementById("chart");
+  
+    var graficoPostagens = new Chart(chart, {
+      type: "pie",
+      data: {
+        labels: ["Primeira Postagem", "Segunda Postagem", "Terceira Postagem"],
+        datasets: [
+          {
+            label: "Postagens mais comentadas",
+            data: [],
+            borderWidth: 1,
+            backgroundColor: ['#FFDAB9',
+              '#F0E68C',
+              '#FFA07A'],
+          },
+        ],
+      },
+    });
+
+    var graficoGenero=   new Chart(chart2, {
+      type: "pie",
+      data: {
+        labels: ["Feminino", "Masculino", "Outro"],
+        datasets: [
+          {
+            label: "Postagens mais comentadas",
+            data: [],
+            borderWidth: 1,
+            backgroundColor: ['#B0E0E6',
+              '#D8BFD8',
+              '#EEE8AA'],
+          },
+        ],
+      },
+    });
+
+
+  </script>
+
+</body>
+
 </html>

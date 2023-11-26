@@ -1,0 +1,14 @@
+.conteudo > div{
+    width: 46%;
+    height: 46%;
+    border: 3px solid #daa520;
+    border-radius: 15px;
+    
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: row !important;
+    gap: 20px;
+    justify-content: center;
+}

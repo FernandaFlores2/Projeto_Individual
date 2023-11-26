@@ -18,7 +18,7 @@ function criarComentario(texto, fkUsuario, fkPublicacao) {
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucao = `
-    INSERT INTO comentario (texto, fkUsuario, fkPublicacao) VALUES = ('${texto}','${fkUsuario}', '${fkPublicacao}');
+    INSERT INTO comentario (texto, fkUsuario, fkPublicacao) VALUES ('${texto}', ${fkUsuario}, ${fkPublicacao});
 
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);

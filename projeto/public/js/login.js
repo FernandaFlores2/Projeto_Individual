@@ -4,7 +4,7 @@ function entrar() {
     
          //Validando o email de Login//
         
-         if (email.indexOf('@') >= 0 && (email.endsWith('.com') || email.endsWith('.br') || email.endsWith('.outlook'))) {
+         if (email.indexOf('@') >= 0 && (email.endsWith('.com') || email.endsWith('.br'))) {
           erro.style.display = 'block'
         }
         else {
@@ -21,7 +21,7 @@ function entrar() {
 
 
       
-      if(email.indexOf('@') >= 0 && (email.endsWith('.com') || email.endsWith('.br') || email.endsWith('.outlook')) && senha.trim() != ''){
+      if(email.indexOf('@') >= 0 && (email.endsWith('.com') || email.endsWith('.br')) && senha.trim() != ''){
         
         fetch("/usuario/autenticar", {
             method: "POST",
@@ -40,6 +40,7 @@ function entrar() {
 
                 resposta.json().then(json => {
                     sessionStorage.setItem("idUsuario", json[0].idUsuario);
+                    sessionStorage.setItem("nomeUsuario", json[0].nome);
         
                     setTimeout(function () {
                         window.location.href = "./dashboard/feed.html";
