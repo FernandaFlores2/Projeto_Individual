@@ -12,6 +12,7 @@ var indexRouter = require("./src/routes/index");
 var usuarioRouter = require("./src/routes/usuario");
 var publicacaoRouter = require("./src/routes/publicacao");
 var dashboardRouter = require("./src/routes/dashboard");
+var operacaoMatematicaRouter = require("./src/routes/operacaoMatematica");
 var comentarioRouter = require("./src/routes/comentario");
 var curtidasPublicacaoRouter = require("./src/routes/curtidasPublicacao");
 
@@ -25,6 +26,7 @@ app.use("/", indexRouter);
 app.use("/usuario", usuarioRouter);
 app.use("/publicacao", publicacaoRouter);
 app.use("/dashboard", dashboardRouter);
+app.use("/operacaoMatematica", operacaoMatematicaRouter);
 app.use("/comentario", comentarioRouter);
 app.use("/curtidasPublicacao", curtidasPublicacaoRouter);
 

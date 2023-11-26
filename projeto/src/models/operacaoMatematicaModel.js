@@ -9,15 +9,6 @@ function obterMedia() {
     return database.executar(instrucao);
 }
 
-function obterDadosGenero() {
-    var instrucao = 
-    `SELECT COUNT(idUsuario) AS 'Dado', Genero FROM Usuario  
-	GROUP BY genero ORDER BY genero; `;
-
-    console.log("Executando a instrução SQL: \n" + instrucao);
-    return database.executar(instrucao);
-}
-
 
 module.exports = {
     obterMedia

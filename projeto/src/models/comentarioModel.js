@@ -3,7 +3,7 @@ var database = require("../database/config")
 function listarComentario(fkPublicacao) {
     var instrucao = 
     `
-    SELECT idComentario, texto FROM comentario 	
+    SELECT idComentario, texto, nome FROM comentario JOIN usuario ON fkUsuario = idUsuario 	
 	WHERE fkPublicacao = ${fkPublicacao}; `;
 
     console.log("Executando a instrução SQL: \n" + instrucao);

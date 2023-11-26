@@ -32,23 +32,34 @@
     </div>
 
     <div class="conteudo">
+
+      <div class="medComentario">
+        <h3 id="mediaComentarios"></h3>
+      </div>
+
       <div class="grafico-um">
+        <h3>Gráfico de comentários por postagens</h3>
         <canvas id="chart"></canvas>
       </div>
 
       <div class="grafico-dois">
+        <h3>Gráfico de distribuição de gêneros </h3>
         <canvas id="chart2"></canvas>
       </div>
+
     </div>
   </div>
+
+
 
   <script src="../js/menu.js"></script>
   <script src="../js/dashboard.js"></script>
 
 
+
   <script>
     const chart = document.getElementById("chart");
-  
+
     var graficoPostagens = new Chart(chart, {
       type: "pie",
       data: {
@@ -66,7 +77,7 @@
       },
     });
 
-    var graficoGenero=   new Chart(chart2, {
+    var graficoGenero = new Chart(chart2, {
       type: "pie",
       data: {
         labels: ["Feminino", "Masculino", "Outro"],

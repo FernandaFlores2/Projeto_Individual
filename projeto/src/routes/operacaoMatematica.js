@@ -5,7 +5,7 @@ var operacaoMatematicaController = require("../controllers/operacaoMatematicaCon
 
 //Recebendo os dados do html e direcionando para a função cadastrar de usuarioController.js
 router.get("/obterMedia/", function (req, res) {
-    dashboardController.obterDadosComentarios(req, res);
+    operacaoMatematicaController.obterMedia(req, res);
 })
 
 

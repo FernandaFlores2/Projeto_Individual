@@ -25,7 +25,7 @@ function mostrarComentarios(comentario) {
                     <div class="container-image-comentario">
                       <img id="fotoLinha" src="../assets/img/foto.jpg" alt="" />
                     </div>
-                    <h4 id="nomeComentario" class="nomeComentario"></h4>
+                    <h4 id="nomeComentario" class="nomeComentario">${comentario.nome}</h4>
                   </div>
                   <div class="linha-comentario">
                     <p id="comentarioPublicacao">${comentario.texto}</p>
@@ -160,7 +160,7 @@ function listarPublicacao() {
           <div class="container-comentario">
                 <textarea class="text-comentario" id="textareaComentario${resposta[i].idPublicacao}" name="textarea" placeholder="Faça um comentário!"
                   id="comentario"></textarea>
-                <img onclick="enviarComentario(this), setTimeout(()=> mostrarComentarios(this),200)" data-id="${resposta[i].idPublicacao}" src="../assets/img/botao-enviar.png" alt="enviar comentario">
+                <img onclick="enviarComentario(this), setTimeout(()=> mostrarComentarios(this),500)" data-id="${resposta[i].idPublicacao}" src="../assets/img/botao-enviar.png" alt="enviar comentario">
               </div>
           <ul id="containerListaComentarios${resposta[i].idPublicacao}" class="container-lista-comentarios">
           
