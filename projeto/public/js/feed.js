@@ -151,7 +151,6 @@ function listarPublicacao() {
           <p id="PublicacaoTexto">${publicacao.texto}</p>
 
           <div class="btn-posts">
-            <button type="button" class="curtir"><img src="../assets/img/heart.svg" alt="Curtir">Curtir</button>
             <button onclick="mostrarComentarios(this)" type="button" data-id="${resposta[i].idPublicacao}" class="comentario"><img
                 src="../assets/img/comment.svg" alt="Comentario">Comentar</button>
           </div>

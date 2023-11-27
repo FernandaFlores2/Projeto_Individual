@@ -21,25 +21,6 @@ fkUsuario INT,
     PRIMARY KEY (idPublicacao, fkUsuario)
 );
 
-CREATE TABLE Fotos(
-idFotoLivro INT PRIMARY KEY AUTO_INCREMENT, 
-nome VARCHAR(45),
-caminhoImagem VARCHAR(300),
-fkUsuario INT, 
-	FOREIGN KEY (fkUsuario) REFERENCES Usuario (idUsuario),
-fkPublicacao INT,
-	FOREIGN KEY (fkPublicacao) REFERENCES Publicacao (idPublicacao)
-);
-
-CREATE TABLE CurtidasPublicacao(
-idCurtidasPublicacao INT AUTO_INCREMENT,
-fkUsuario INT, 
-	FOREIGN KEY (fkUsuario) REFERENCES Usuario (idUsuario),
-fkPublicacao INT,
-	FOREIGN KEY (fkPublicacao) REFERENCES publicacao (idPublicacao),
-    PRIMARY KEY (idCurtidasPublicacao, fkUsuario, fkPublicacao)
-);
-
 CREATE TABLE Comentario(
 idComentario INT  AUTO_INCREMENT,
 texto VARCHAR(255),
